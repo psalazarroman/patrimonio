@@ -1,0 +1,79 @@
+
+Asunto: Especificaciones para el Desarrollo de una Aplicación de Gestión Patrimonial
+1. Introducción y Visión del Proyecto
+
+Hola,
+
+Estoy buscando desarrollar una aplicación de gestión patrimonial integral, diseñada para centralizar y administrar todos los aspectos de mis finanzas personales, propiedades inmobiliarias e inversiones. El objetivo es crear una herramienta intuitiva y potente que ofrezca una visión 360º de mi patrimonio, facilite la toma de decisiones y automatice el seguimiento de mis activos.
+
+Actualmente, tengo un prototipo funcional construido en Baserow que define la estructura de datos y las relaciones clave del sistema. Este documento se basa en esa lógica y debe servir como punto de partida para el desarrollo de una aplicación nativa (móvil y/o web).
+
+2. Descripción de Funcionalidades Esenciales
+
+La aplicación debe estructurarse en los siguientes módulos interconectados:
+
+Módulo 1: Finanzas (Cash Flow)
+El núcleo de la aplicación. Debe permitir un seguimiento exhaustivo de todos los ingresos y gastos.
+
+Registro de Movimientos: Un formulario para añadir nuevos movimientos con campos para: Fecha, Descripción, Importe (positivo para ingresos, negativo para gastos).
+
+Categorización: Cada movimiento debe poder asociarse a una Categoría (p. ej., "Impuestos", "Reparaciones") y una Subcategoría (p. ej., "IBI", "Electricidad"). Estas deben ser personalizables.
+
+Vinculación de Movimientos: La funcionalidad clave es poder vincular cada movimiento a otros elementos de la app: una cuenta bancaria, un inmueble, un alquiler, un seguro, una inversión, etc. Esto es crucial para el análisis de rentabilidad.
+
+Gestión de Cuentas: Una sección para dar de alta y gestionar todas las cuentas bancarias y efectivo, mostrando el saldo inicial y el saldo calculado a partir de los movimientos.
+
+Módulo 2: Inmuebles
+Gestión detallada de todas las propiedades.
+
+Ficha de Inmueble: Cada inmueble debe tener su propia ficha con campos como: Nombre/alias, Referencia catastral, Tipo de propiedad (Piso, Local, Solar), Dirección, M2, % de propiedad, Valor y Fecha de adquisición.
+
+Promociones/Edificios: Posibilidad de agrupar varios inmuebles bajo una misma promoción o edificio.
+
+Alquileres: Sub-módulo para gestionar los contratos de alquiler asociados a un inmueble, con datos del inquilino (nombre, DNI, contacto). Los cobros del alquiler se registrarán como movimientos vinculados a este alquiler.
+
+Comunidades de Propietarios: Ficha para registrar los datos de las comunidades de vecinos (NIF, nombre) y vincularlas a los inmuebles correspondientes.
+
+Módulo 3: Seguros e Inversiones
+Seguimiento de pólizas y otros activos financieros.
+
+Gestión de Seguros: Un listado de todas las pólizas (hogar, vida, etc.) con campos para: Nº de póliza, Aseguradora, Correduría. Cada seguro debe poder vincularse a un inmueble. Los pagos de las primas serán movimientos vinculados.
+
+Seguimiento de Inversiones: Un apartado para registrar otras inversiones (p. ej., "Participación en Startup X"), su valor y vincular los movimientos de capital (aportaciones, dividendos).
+
+Módulo 4: Calendario y Eventos
+Un sistema de agenda para fechas clave.
+
+Gestión de Eventos: Debe permitir crear eventos con Fecha, Descripción y Tipo (p. ej., "Renovación de alquiler", "Vencimiento de seguro", "Junta de comunidad", "Compra/Venta de activo").
+
+Vinculación de Eventos: Los eventos deben poder asociarse a inmuebles, seguros, alquileres, etc..
+
+3. Sugerencias de Mejora y Funcionalidades Avanzadas
+
+Además de replicar la lógica actual, me gustaría explorar la implementación de las siguientes mejoras para llevar la aplicación al siguiente nivel:
+
+Dashboard Principal: Una pantalla de inicio visual con gráficos y KPIs (Indicadores Clave de Rendimiento) que muestren:
+
+Evolución del patrimonio neto.
+
+Gráfico de ingresos vs. gastos por mes/año.
+
+Rentabilidad por inmueble (ingresos de alquiler vs. gastos asociados).
+
+Resumen de saldos en cuentas bancarias.
+
+
+Notificaciones Push: Alertas automáticas para eventos importantes: vencimiento de un contrato de alquiler, pago de un seguro, fecha de una junta, etc.
+
+Digitalización de Documentos (OCR): Una función para sacar una foto a una factura o recibo (p. ej., del IBI o una reparación) y que la app, mediante tecnología OCR, rellene automáticamente los campos de fecha, importe y proveedor en un nuevo movimiento.
+
+Sincronización Bancaria (Agregación): Explorar la posibilidad de conectar la app con mis cuentas bancarias (mediante APIs como las que habilita la normativa PSD2) para importar los movimientos de forma automática, minimizando la entrada manual de datos.
+
+Gestión de Documentos: Permitir adjuntar archivos (PDF, imágenes) a inmuebles, movimientos, seguros, etc. (p. ej., la escritura de una propiedad, el contrato de un alquiler, la póliza de un seguro).
+
+4. Apertura a Propuestas
+
+Este documento describe la visión y las funcionalidades básicas que necesito. Sin embargo, como experto en desarrollo, estoy totalmente abierto a tus sugerencias, mejoras y a cualquier cambio que consideres que pueda aportar valor al producto final, ya sea en la experiencia de usuario, la arquitectura técnica o la inclusión de nuevas funcionalidades.
+
+
+Supongo que con esto se puede hacer una idea inicial. se que hay cosas concretas que a lo mejor no se pueden hacer, pero si buscar la forma de hacerlo lo mas sencillo posible (por ejemplo volcado de datos de movimientos bancarios)
